@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Button</title>
+</head>
+<body>
+
+<h2 id="status">OFF</h2>
+<button id="toggleBtn">Toggle</button>
+
+<script>
+    let statusText = document.getElementById("status");
+    let button = document.getElementById("toggleBtn");
+
+    button.addEventListener("click", function() {
+        if (statusText.textContent === "OFF") {
+            statusText.textContent = "ON";
+            statusText.style.color = "green";
+        } else {
+            statusText.textContent = "OFF";
+            statusText.style.color = "red";
+        }
+    });
+</script>
+
+</body>
+</html>

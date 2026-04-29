@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click</title>
+</head>
+<body>
+
+<h2 id="text">Hello World</h2>
+<button id="btn">Click Me</button>
+
+<script>
+    let button = document.getElementById("btn");
+    let text = document.getElementById("text");
+
+    button.addEventListener("click", function() {
+        text.textContent = "Welcome!";
+    });
+</script>
+
+</body>
+</html>

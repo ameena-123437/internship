@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="text" id="name" placeholder="Enter name">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+    let form = document.getElementById("myForm");
+    let message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let name = document.getElementById("name").value;
+
+        if(name === "") {
+            message.textContent = "Name cannot be empty!";
+        } else {
+            message.textContent = "Form submitted successfully!";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <ul id="list">
+    </head>
+    <body>
+    <li>Apple</li>
+</ul>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+
+<script>
+function addItem() {
+    let li = document.createElement("li");
+    li.textContent = "Banana";
+    document.getElementById("list").appendChild(li);
+}
+
+function removeItem() {
+    let list = document.getElementById("list");
+    if (list.lastChild) {
+        list.removeChild(list.lastChild);
+    }
+}
+</script>
+
+</body>
+</html>
